@@ -1,4 +1,175 @@
 # -Predictive-Analytics-Lab-Exam-2.-
+📌 Objective
+
+The objective of this lab exam is to perform a binary classification task using an appropriate machine learning algorithm. The project involves:
+
+Exploratory Data Analysis (EDA)
+
+Building a classification model
+
+Visualizing the decision boundary
+
+Evaluating model performance
+
+📌 Dataset Description
+
+The dataset consists of:
+
+Feature1 (Numerical)
+
+Feature2 (Numerical)
+
+Target (Yes/No)
+
+Initially, the dataset had 1020 rows. After preprocessing:
+
+20 rows with missing target values were removed
+
+1 extreme outlier (Feature1 = 10000) was removed
+
+Final dataset used: 999 samples
+
+📌 Exploratory Data Analysis (EDA)
+Data Inspection
+
+Checked data types and summary statistics
+
+Identified missing values
+
+Missing Value Handling
+
+Removed rows with missing target values
+
+Outlier Detection
+
+Used IQR method on Feature1
+
+Removed extreme outlier
+
+Class Distribution
+
+No: 784 samples
+
+Yes: 215 samples
+
+Imbalance ratio ≈ 3.65:1
+
+Visualizations
+
+Bar plot for class distribution
+
+Histograms with KDE
+
+Boxplots by class
+
+Scatter plot (Feature1 vs Feature2)
+
+Correlation heatmap
+
+Correlation Analysis
+
+Feature1: -0.044
+
+Feature2: -0.008
+→ Both features show very weak correlation with the target
+
+📌 Model Building
+Algorithm Used: Logistic Regression
+Reason for Selection
+
+Suitable for binary classification
+
+Easy to interpret
+
+Provides probability outputs
+
+Allows visualization of decision boundary
+
+Preprocessing Steps
+
+80/20 stratified train-test split
+
+Feature scaling using StandardScaler
+
+Handled class imbalance using class_weight = 'balanced'
+
+📌 Cross-Validation Results (5-Fold)
+
+Accuracy: 0.5215 ± 0.0325
+
+ROC-AUC: 0.5279 ± 0.0267
+
+→ Performance is close to random, indicating weak relationship between features and target
+
+📌 Decision Boundary
+
+A linear decision boundary was plotted
+
+Represents probability = 0.5
+
+Data points plotted with class labels
+
+Observation:
+The boundary does not clearly separate the classes, confirming poor predictive ability
+
+📌 Model Evaluation (Test Set)
+
+Accuracy: 55.50%
+
+Precision (Yes): 0.2745
+
+Recall (Yes): 0.6512
+
+F1-Score: 0.3862
+
+ROC-AUC: 0.5392
+
+Confusion Matrix
+
+TN: 83
+
+FP: 74
+
+FN: 15
+
+TP: 28
+
+📌 Interpretation
+
+Accuracy is only slightly better than random guessing
+
+ROC-AUC indicates weak classification performance
+
+High recall but low precision for "Yes" class
+
+Model struggles due to weak feature relevance
+
+📌 Conclusion
+
+Logistic Regression was successfully implemented
+
+Proper preprocessing, scaling, and evaluation were performed
+
+Weak correlation between features and target limited performance
+
+Decision boundary confirms poor class separation
+
+✔ EDA completed
+✔ Model built
+✔ Decision boundary visualized
+✔ Performance evaluated
+
+📌 Libraries Used
+
+NumPy
+
+Pandas
+
+Matplotlib
+
+Seaborn
+
+Scikit-learn
 https://colab.research.google.com/drive/1-5_YttRoihIQ4q8MyYCoGB7oBY34ZW3z?usp=sharing
 [Predictive_Analytics_Lab_Exam_2_ (1).ipynb](https://github.com/user-attachments/files/26045496/Predictive_Analytics_Lab_Exam_2_.1.ipynb)
 {
